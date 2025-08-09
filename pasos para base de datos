@@ -1,0 +1,42 @@
+## 1️⃣ Comando para ejecutar PostgreSQL con Docker
+
+Ejecuta este comando en tu terminal (PowerShell, CMD o Git Bash):
+
+```bash
+docker run --name postgres-db \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=yourpassword \
+  -e POSTGRES_DB=postgres \
+  -p 5432:5432 \
+  -d postgres
+
+2️⃣ Pasos para configurar DataGrip
+Abrir DataGrip.
+
+Ir a File → New → Data Source → PostgreSQL.
+
+En la ventana de conexión, llenar los datos:
+
+Host: localhost
+
+Port: 5432
+
+User: postgres
+
+Password: yourpassword
+
+Dar clic en Test Connection para verificar que funciona.
+
+Si el test es exitoso, presionar OK.
+
+3️⃣ Creación de una base de datos desde DataGrip
+En DataGrip, en el panel izquierdo, busca la conexión que creaste.
+
+Haz clic derecho sobre el servidor PostgreSQL y selecciona:
+New → Database.
+
+Ingresa el nombre de tu nueva base de datos.
+
+Presiona OK.
+
+¡Listo! Ya puedes ejecutar queries en tu nueva base de datos.
